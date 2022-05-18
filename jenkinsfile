@@ -1,0 +1,7 @@
+pipeline {
+  environnement {
+    IMAGE_NAME = "alpinehelloworld"
+    IMAGE_TAG = "latest"
+    votre_id_dockerhub = "papaflo"
+  }
+}
