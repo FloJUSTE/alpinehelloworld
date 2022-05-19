@@ -69,7 +69,7 @@ pipeline {
   
     stage('Pousser image sur HEROKU en STAGING') {
       when {
-        expression { GIT_BRanCH == 'origin/master' }
+        expression { GIT_BRANCH == 'origin/master' }
       }
       agent any
       environment {
@@ -89,7 +89,7 @@ pipeline {
     
     stage('Pousser image sur HEROKU en PRODUCTION') {
       when {
-        expression { GIT_BRanCH == 'origin/master' }
+        expression { GIT_BRANCH == 'origin/master' }
       }
       agent any
       environment {
