@@ -1,6 +1,6 @@
 pipeline {
 
-  environnement {
+  environment {
     IMAGE_NAME = "alpinehelloworld"
     IMAGE_TAG = "latest"
     ID_DOCKER = "papaflo"
@@ -72,7 +72,7 @@ pipeline {
         expression { GIT_BRanCH == 'origin/master' }
       }
       agent any
-      environnement {
+      environment {
         HEROKU_KEY = credentials('heroku')
       }
       steps {
@@ -92,7 +92,7 @@ pipeline {
         expression { GIT_BRanCH == 'origin/master' }
       }
       agent any
-      environnement {
+      environment {
         HEROKU_KEY = credentials('heroku')
       }
       steps {
