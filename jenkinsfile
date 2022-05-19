@@ -4,4 +4,6 @@ pipeline {
     IMAGE_TAG = "latest"
     votre_id_dockerhub = "papaflo"
   }
+  agent none
+  
 }
