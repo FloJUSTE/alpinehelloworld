@@ -33,6 +33,7 @@ pipeline {
         }
       }
     }
+	
     
     stage('Test image') {
       agent any
@@ -107,6 +108,6 @@ pipeline {
       }
     }
   }
-  
+}
   
 
