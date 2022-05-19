@@ -4,7 +4,7 @@ pipeline {
     IMAGE_NAME = "alpinehelloworld"
     IMAGE_TAG = "latest"
     ID_DOCKER = "papaflo"
-    DOCKER_CRED = credentials('Dockerhub')
+    DOCKER_CRED = credentials('dockerhub_pwd')
     STAGING = "${ID_DOCKER}-staging"
     PRODUCTION = "${ID_DOCKER}-production"
   }
@@ -60,7 +60,7 @@ pipeline {
       steps {
         script {
           sh '''
-            docker login $DOCKER_CRED
+            docker login -u=$ID_DOCKER -p=$DOCKER_CRED
             docker push $ID_DOCKER/$IMAGE_NAME
           '''
         }
